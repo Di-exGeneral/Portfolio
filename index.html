@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Di-exGeneral | DevOps Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div id="cursor"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Di-ex<span>General</span></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <p class="hero-label">// initialising system</p>
+      <h1 class="hero-title">
+        Building the infrastructure<br/>
+        <span>that keeps things running.</span>
+      </h1>
+      <p class="hero-sub">
+        DevOps Engineer. I automate, containerise, and deploy.<br/>
+        Sol Plaatje University &mdash; ICT Diploma, Year 3.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="https://github.com/Di-exGeneral" target="_blank" class="btn-ghost">GitHub &rarr;</a>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-bar">
+        <span class="t-dot red"></span>
+        <span class="t-dot yellow"></span>
+        <span class="t-dot green"></span>
+        <span class="t-title">geek@kali ~ $</span>
+      </div>
+      <div class="terminal-body" id="terminal-output"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="section-label">// about.md</p>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm Tlotliso Ledwaba, a third-year ICT Diploma student at Sol Plaatje University with a focus on DevOps engineering.
+            I work exclusively in the terminal, building automation scripts, managing containers, and learning
+            the infrastructure that powers modern software.
+          </p>
+          <p>
+            My journey is documented publicly on GitHub — every script, every Dockerfile, every mistake.
+            I believe in learning by breaking things and fixing them.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">Kali</span>
+            <span class="stat-label">Daily Driver</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Terminal Based</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="stack" id="stack">
+    <div class="section-inner">
+      <p class="section-label">// stack.json</p>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="stack-grid">
+        <div class="stack-category">
+          <h3>DevOps</h3>
+          <div class="tags">
+            <span class="tag accent">Docker</span>
+            <span class="tag accent">Docker Compose</span>
+            <span class="tag accent">Git</span>
+            <span class="tag accent">Bash</span>
+            <span class="tag accent">Cron</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span class="tag blue">Python</span>
+            <span class="tag blue">Java</span>
+            <span class="tag blue">Bash</span>
+            <span class="tag blue">SQL</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3>Platforms</h3>
+          <div class="tags">
+            <span class="tag dim">Kali Linux</span>
+            <span class="tag dim">Ubuntu</span>
+            <span class="tag dim">Android</span>
+            <span class="tag dim">AWS (Learning)</span>
+          </div>
+        </div>
+        <div class="stack-category">
+          <h3>Tools</h3>
+          <div class="tags">
+            <span class="tag dim">Vim</span>
+            <span class="tag dim">Django</span>
+            <span class="tag dim">GitHub</span>
+            <span class="tag dim">.NET</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="section-label">// projects/</p>
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-top">
+            <span class="project-tag">Django &middot; Docker &middot; Python</span>
+            <a href="https://github.com/Di-exGeneral/HCI-Assignment" target="_blank" class="project-link">&#8599;</a>
+          </div>
+          <h3>CommunityFix</h3>
+          <p>A community fault reporting system built for the HCI module. Citizens can submit and track service delivery issues without an account. Containerised with Docker.</p>
+          <div class="project-footer">
+            <span class="project-status live">Containerised</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">Bash &middot; Python &middot; Cron</span>
+            <a href="https://github.com/Di-exGeneral/DevOps-Journey" target="_blank" class="project-link">&#8599;</a>
+          </div>
+          <h3>DevOps Journey</h3>
+          <p>A public repo documenting my self-taught DevOps learning path. Includes automation scripts, Dockerfiles, Git hooks, and system monitoring tools.</p>
+          <div class="project-footer">
+            <span class="project-status active">Active</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">Java &middot; Android</span>
+            <a href="#" class="project-link">&#8599;</a>
+          </div>
+          <h3>Restaurant Mobile App</h3>
+          <p>An Android application for restaurant ordering and menu management built with Java.</p>
+          <div class="project-footer">
+            <span class="project-status done">Completed</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">Java &middot; Android</span>
+            <a href="#" class="project-link">&#8599;</a>
+          </div>
+          <h3>Banking App</h3>
+          <p>A mobile banking application built for Android with account management and transaction features.</p>
+          <div class="project-footer">
+            <span class="project-status done">Completed</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-top">
+            <span class="project-tag">.NET &middot; Backend</span>
+            <a href="#" class="project-link">&#8599;</a>
+          </div>
+          <h3>Website Backend</h3>
+          <p>A backend API built with .NET handling server-side logic, routing, and data management.</p>
+          <div class="project-footer">
+            <span class="project-status done">Completed</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section-inner">
+      <p class="section-label">// contact.sh</p>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-grid">
+        <a href="https://github.com/Di-exGeneral" target="_blank" class="contact-card">
+          <span class="contact-icon">&#60;/&#62;</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-val">Di-exGeneral</span>
+        </a>
+        <a href="mailto:tlotlisoaustonledwaba@gmail.com" class="contact-card">
+          <span class="contact-icon">@</span>
+          <span class="contact-label">Email</span>
+          <span class="contact-val">tlotlisoaustonledwaba@gmail.com</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Built with HTML, CSS &amp; Docker &mdash; Di-exGeneral &copy; 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
