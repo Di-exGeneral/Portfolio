@@ -469,9 +469,17 @@ section { padding: 6rem 0; }
   font-weight: 800;
 }
 
+i {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+
 .contact-label {
   font-size: 0.7rem;
-  color: var(--text-dim);
+  color: var(--accent);
   letter-spacing: 0.15em;
   text-transform: uppercase;
 }

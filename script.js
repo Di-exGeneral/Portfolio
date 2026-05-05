@@ -30,9 +30,9 @@ const lines = [
   { type: 'out', text: 'Docker, Bash, Python, Git, Linux' },
   { type: 'prompt', text: '$ docker ps' },
   { type: 'out', text: 'CONTAINER ID   IMAGE         STATUS' },
-  { type: 'out', text: 'a1b2c3d4e5f6   hydrowatch     Up 3 hours' },
+  { type: 'out', text: '236d4d90d660   portfolio     Up 3 hours' },
   { type: 'prompt', text: '$ git log --oneline -1' },
-  { type: 'out', text: 'c9f1a2b  Containerised Django app' },
+  { type: 'out', text: 'ed1f777  Portfolio updated and deployed to AWS' },
   { type: 'prompt', text: '$ _' },
 ];
 
