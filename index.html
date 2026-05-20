@@ -1,248 +1,604 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Di-exGeneral | DevOps Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tlotliso Ledwaba - DevOps Engineer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <div id="cursor"></div>
-  <div id="cursor-dot"></div>
-
-  <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">Di-ex<span>General</span></a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <p class="hero-label">// initialising system</p>
-      <h1 class="hero-title">
-        Building the infrastructure<br/>
-        <span>that keeps things running.</span>
-      </h1>
-      <p class="hero-sub">
-        DevOps Engineer. I automate, containerise, and deploy.<br/>
-        Sol Plaatje University &mdash; ICT Diploma, Year 3.
-      </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="https://github.com/Di-exGeneral" target="_blank" class="btn-ghost">GitHub &rarr;</a>
-      </div>
+  <body>
+    <!-- ── BACKGROUND ORBS ── -->
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
     </div>
-    <div class="hero-terminal">
-      <div class="terminal-bar">
-        <span class="t-dot red"></span>
-        <span class="t-dot yellow"></span>
-        <span class="t-dot green"></span>
-        <span class="t-title">geek@kali ~ $</span>
-      </div>
-      <div class="terminal-body" id="terminal-output"></div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="section-inner">
-      <p class="section-label">// about.md</p>
-      <h2 class="section-title">Who I Am</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            I'm Tlotliso Ledwaba, a third-year ICT Diploma student at Sol Plaatje University with a focus on DevOps engineering.
-            I work exclusively in the terminal, building automation scripts, managing containers, and learning
-            the infrastructure that powers modern software.
+    <!-- ── NAV ── -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">TL<em>.</em></a>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+      <button class="nav-cv-btn" id="openCv">view_cv()</button>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="page">
+      <!-- ══════════════════════════════════════════
+           HERO
+      ══════════════════════════════════════════ -->
+      <section id="hero">
+        <div class="hero-content">
+          <div class="hero-eyebrow">OPEN TO OPPORTUNITIES</div>
+          <h1 class="hero-name">
+            Tlotliso<br />
+            <span class="acc">Ledwaba</span>
+          </h1>
+          <p class="hero-role"><span>$</span> DevOps Engineer</p>
+          <p class="hero-desc">
+            I build infrastructure, automate workflows, and ship real software.
+            From containerised deployments to team-led mobile applications —
+            engineering discipline meets practical delivery.
           </p>
-          <p>
-            My journey is documented publicly on GitHub — every script, every Dockerfile, every mistake.
-            I believe in learning by breaking things and fixing them.
-          </p>
-        </div>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num">5+</span>
-            <span class="stat-label">Projects Built</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">Kali</span>
-            <span class="stat-label">Daily Driver</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">100%</span>
-            <span class="stat-label">Terminal Based</span>
+          <div class="hero-actions">
+            <a href="#projects" class="btn-fill">View Projects</a>
+            <a href="#contact" class="btn-outline">Get In Touch</a>
           </div>
         </div>
+
+        <div class="terminal-wrap">
+          <div class="terminal">
+            <div class="t-bar">
+              <div class="dot dr"></div>
+              <div class="dot dy"></div>
+              <div class="dot dg"></div>
+              <span class="t-label">tlotliso@machine ~ whoami</span>
+            </div>
+            <div class="t-body" id="termBody"></div>
+          </div>
+          <div class="float-badge">⚡ Available for hire</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           ABOUT
+      ══════════════════════════════════════════ -->
+      <section id="about">
+        <div class="section-tag reveal">02. ABOUT</div>
+        <h2 class="section-title reveal">Engineer.<br />Builder. Leader.</h2>
+
+        <div class="about-grid">
+          <div class="glass about-main reveal-left">
+            <p>
+              I'm a third-year ICT student at
+              <strong>Sol Plaatje University</strong> in Kimberley, with
+              hands-on experience across infrastructure, automation,
+              containerisation, and full-stack development. I don't just study
+              these things — I build with them.
+            </p>
+            <p>
+              I lead a four-member development team building
+              <strong>HydroAlert</strong>, a mobile water outage notification
+              system. I also built <strong>CommunityFix</strong>, a fully
+              functional Django fault-reporting platform with admin dashboards,
+              real-time validation, and dispute resolution — independently, for
+              a production-level brief.
+            </p>
+            <p>
+              Outside of project work, I hold the role of
+              <strong>Deputy Community Outreach Officer</strong> at SPU's NAS
+              Community Engagement Committee, and I voluntarily tutor and mentor
+              fellow students in mobile application development. I build, I
+              lead, and I ship.
+            </p>
+          </div>
+
+          <div class="about-side">
+            <div class="glass stat-card reveal" style="transition-delay: 0.08s">
+              <span class="stat-num">5+</span>
+              <span class="stat-label">PROJECTS SHIPPED</span>
+            </div>
+            <div class="glass stat-card reveal" style="transition-delay: 0.16s">
+              <span class="stat-num">4</span>
+              <span class="stat-label">TEAM MEMBERS LED</span>
+            </div>
+            <div class="glass stat-card reveal" style="transition-delay: 0.24s">
+              <span class="stat-num">3</span>
+              <span class="stat-label">YEARS BUILDING</span>
+            </div>
+          </div>
+
+          <div class="glass tags-card reveal" style="transition-delay: 0.12s">
+            <div class="tags-title">FOCUS AREAS</div>
+            <div class="tag-cloud">
+              <span class="tag">DevOps</span>
+              <span class="tag">Infrastructure</span>
+              <span class="tag">Containerisation</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Cloud</span>
+              <span class="tag">Open Source</span>
+              <span class="tag">Security</span>
+              <span class="tag">Mobile Dev</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">Android</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           SKILLS
+      ══════════════════════════════════════════ -->
+      <section id="skills">
+        <div class="section-tag reveal">03. SKILLS</div>
+        <h2 class="section-title reveal">What I Work With</h2>
+
+        <div class="skills-outer">
+          <!-- Row 1 -->
+          <div class="skills-row">
+            <div
+              class="glass skill-group reveal"
+              style="transition-delay: 0.05s"
+            >
+              <div class="sg-header">
+                <div class="sg-icon">
+                  <i class="fa-solid fa-terminal" style="color: cyan"></i>
+                </div>
+                <span class="sg-name">Shell & Scripting</span>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Bash</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.88"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Python (DevOps)</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.72"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Cron Jobs</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.80"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Vim</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.78"></div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="glass skill-group reveal"
+              style="transition-delay: 0.1s"
+            >
+              <div class="sg-header">
+                <div class="sg-icon">
+                  <i class="fa-solid fa-database" style="color: cyan"></i>
+                </div>
+                <span class="sg-name">Infrastructure</span>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Docker</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.82"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Docker Compose</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.78"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Linux Admin</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.85"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">SSH / Networking</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.76"></div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="glass skill-group reveal"
+              style="transition-delay: 0.15s"
+            >
+              <div class="sg-header">
+                <div class="sg-icon">
+                  <i class="fa-solid fa-code-branch" style="color: cyan"></i>
+                </div>
+                <span class="sg-name">Version Control</span>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Git</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.90"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">GitHub CLI</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.84"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Branching Strategies</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.78"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Git Hooks</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.70"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end skills-row 1 -->
+
+          <!-- Row 2 -->
+          <div class="skills-row">
+            <div
+              class="glass skill-group reveal"
+              style="transition-delay: 0.2s"
+            >
+              <div class="sg-header">
+                <div class="sg-icon">
+                  <i class="fa-brands fa-android" style="color: cyan"></i>
+                </div>
+                <span class="sg-name">Mobile & Android</span>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Java (Android)</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.72"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Flutter / Dart</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.68"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Firebase</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.67"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">SQLite / Hive</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.62"></div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="glass skill-group reveal"
+              style="transition-delay: 0.25s"
+            >
+              <div class="sg-header">
+                <div class="sg-icon">
+                  <i class="fa-solid fa-code" style="color: cyan"></i>
+                </div>
+                <span class="sg-name">Web & Backend</span>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Django</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.72"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Java (OOP)</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.70"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">HTML / CSS / JS</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.76"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">REST APIs</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.64"></div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="glass skill-group reveal"
+              style="transition-delay: 0.3s"
+            >
+              <div class="sg-header">
+                <div class="sg-icon">
+                  <i class="fa-solid fa-shield" style="color: cyan"></i>
+                </div>
+                <span class="sg-name">Security</span>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Burp Suite</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.62"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Web App Testing</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.60"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">DVWA / CTF</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.58"></div>
+                </div>
+              </div>
+              <div class="skill-row">
+                <span class="sn">Network Analysis</span>
+                <div class="bar-wrap">
+                  <div class="bar" data-w="0.65"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end skills-row 2 -->
+        </div>
+        <!-- end skills-outer -->
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           PROJECTS
+      ══════════════════════════════════════════ -->
+      <section id="projects">
+        <div class="section-tag reveal">04. PROJECTS</div>
+        <h2 class="section-title reveal">Things I've Built</h2>
+
+        <div class="projects-grid">
+          <!-- PROJECT 01 — FEATURED -->
+           <a href="https://github.com/Di-exGeneral/NPRT63" class="p-link" target="_blank">
+            <div class="glass project-card featured reveal-left">
+              <div class="p-featured-label">★ FEATURED PROJECT</div>
+              <div class="p-num">PROJECT_01</div>
+              <h3 class="p-title">HydroAlert</h3>
+              <div class="p-badge">Academic Project · Sol Plaatje University</div>
+              <p class="p-desc">
+                Mobile-based water outage notification and fault reporting system for municipalities. Users receive real-time alerts and can report
+                infrastructure faults with geo-tagging. Led a four-member team as group lead — responsible for architecture, work breakdown structure, 
+                stakeholder analysis, and implementation across Flutter, AWS, and cloud backend infrastructure.
+              </p>
+              <div class="p-stack">
+                <span class="s-chip">Flutter</span>
+                <span class="s-chip">Dart</span>
+                <span class="s-chip">AWS</span>
+                <span class="s-chip">SQLite</span>
+                <span class="s-chip">Hive</span>
+              </div>
+                <i class="fa-brands fa-github" style="color: cyan"></i>
+                View on GitHub
+            </div>
+          </a>
+
+          <!-- PROJECT 02 -->
+           <a href="https://github.com/Di-exGeneral/HCI-Assignment" class="p-link" target="_blank">
+            <div class="glass project-card reveal" >
+              <div class="p-num">PROJECT_02</div>
+              <h3 class="p-title">CommunityFix</h3>
+              <p class="p-desc">
+                Django prototype for community infrastructure fault reporting. Real-time JS validation, photo upload, reference number
+                generation, admin dashboard, and dispute resolution. Delivered solo to a production-level brief.
+              </p>
+              <div class="p-stack">
+                <span class="s-chip">Django</span>
+                <span class="s-chip">Python</span>
+                <span class="s-chip">JavaScript</span>
+                <span class="s-chip">SQLite</span>
+              </div>
+              
+                <i class="fa-brands fa-github" style="color: cyan"></i>
+                GitHub
+            </div>
+          </a>
+
+          <!-- PROJECT 03 -->
+           <a href="https://github.com/Di-exGeneral/DevOps-Journey" class="p-link" target="_blank">
+            <div class="glass project-card reveal" >
+              <div class="p-num">PROJECT_03</div>
+              <h3 class="p-title">DevOps Journey</h3>
+              <p class="p-desc">
+                Public infrastructure roadmap on GitHub. Git, Linux, Bash, Python automation, Docker, Compose, multi-container architecture,
+                volumes, networking — all hands-on.
+              </p>
+              <div class="p-stack">
+                <span class="s-chip">Docker</span>
+                <span class="s-chip">Bash</span>
+                <span class="s-chip">Python</span>
+                <span class="s-chip">Linux</span>
+              </div>
+                <i class="fa-brands fa-github" style="color: cyan"></i>
+                GitHub
+            </div>
+          </a>
+        </div>
+        <!-- end projects-grid -->
+      </section>
+
+      <!-- ══════════════════════════════════════════
+           CONTACT
+      ══════════════════════════════════════════ -->
+      <section id="contact">
+        <div class="section-tag reveal">05. CONTACT</div>
+        <h2 class="section-title reveal">Let's Build<br />Something.</h2>
+
+        <div class="contact-layout">
+          <!-- FORM -->
+          <div class="glass reveal" style="padding: 2.2rem">
+            <form class="contact-form">
+              <div class="form-row">
+                <div class="fg">
+                  <label class="fl">YOUR_NAME</label>
+                  <input
+                    class="fi"
+                    type="text"
+                    placeholder="John Doe"
+                    id="cf-name"
+                  />
+                </div>
+                <div class="fg">
+                  <label class="fl">YOUR_EMAIL</label>
+                  <input
+                    class="fi"
+                    type="email"
+                    placeholder="john@gmail.com"
+                    id="cf-email"
+                  />
+                </div>
+              </div>
+              <div class="fg">
+                <label class="fl">SUBJECT</label>
+                <input
+                  class="fi"
+                  type="text"
+                  placeholder="Internship / collab / say hi"
+                  id="cf-subject"
+                />
+              </div>
+              <div class="fg">
+                <label class="fl">MESSAGE</label>
+                <textarea
+                  class="ft"
+                  placeholder="Tell me about the opportunity or project..."
+                  id="cf-msg"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn-fill"
+                id="send-btn"
+                style="align-self: flex-start"
+              >
+                send_message()
+              </button>
+            </form>
+          </div>
+
+          <!-- CONTACT DETAILS -->
+          <div class="contact-right">
+            <a href="mailto:tlotlisoaustonledwaba@gmail.com" style="color: inherit; text-decoration: none">
+            <div class="glass c-item reveal" style="transition-delay: 0.08s">
+              <div class="c-icon">
+                <i class="fa-solid fa-envelope" style="color: cyan"></i>
+              </div>
+              <div>
+                <div class="c-label">EMAIL</div>
+                <div class="c-val">
+
+                    tlotlisoaustonledwaba@gmail.com
+                </div>
+              </div>
+            </div>
+          </a>
+
+            <a href="https://github.com/Di-exGeneral" target="_blank" style="color: inherit; text-decoration: none">
+            <div class="glass c-item reveal" style="transition-delay: 0.14s">
+              <div class="c-icon">
+                <i class="fa-brands fa-github" style="color: cyan"></i>
+              </div>
+              <div>
+                <div class="c-label">GITHUB</div>
+                <div class="c-val">
+                    github.com/Di-exGeneral
+                </div>
+              </div>
+            </div>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/tlotliso-ledwaba-3201ab309/" target="_blank" style="color: inherit; text-decoration: none">
+              <div class="glass c-item reveal" style="transition-delay: 0.2s">
+                <div class="c-icon">
+                  <i class="fa-brands fa-square-linkedin" style="color: cyan"></i>
+                </div>
+                <div>
+                  <div class="c-label">LINKEDIN</div>
+                  <div class="c-val">linkedin.com/in/tlotliso-ledwaba</div>
+                </div>
+              </div>
+            </a>
+
+          </div>
+          <!-- end contact-right -->
+        </div>
+        <!-- end contact-layout -->
+      </section>
+    </div>
+    <!-- end .page -->
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <span>Tlotliso Ledwaba</span> &nbsp;·&nbsp; DevOps Engineer &nbsp;·&nbsp;
+      <span>Sol Plaatje University</span> &nbsp;·&nbsp; Kimberley, ZA
+      &nbsp;&nbsp; © 2025
+    </footer>
+
+    <!-- ══════════════════════════════════════════
+         CV MODAL
+    ══════════════════════════════════════════ -->
+    <div class="cv-overlay" id="cvOverlay">
+      <div class="cv-modal">
+        <div class="cv-modal-header">
+          <div class="cv-modal-title">Curriculum <span>Vitae</span></div>
+          <div class="cv-header-actions">
+            <button class="cv-dl-btn" id="cvDownload">
+              <i class="fa-solid fa-download"></i>
+              Download
+            </button>
+            <button class="cv-close" id="closeCv">
+              <svg viewBox="0 0 24 24">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <iframe src="cv.html" class="cv-frame" id="cv-frame"></iframe>
       </div>
     </div>
-  </section>
 
-  <!-- STACK -->
-  <section class="stack" id="stack">
-    <div class="section-inner">
-      <p class="section-label">// stack.json</p>
-      <h2 class="section-title">Tech Stack</h2>
-      <div class="stack-grid">
-        <div class="stack-category">
-          <h3>DevOps</h3>
-          <div class="tags">
-            <span class="tag accent">Docker</span>
-            <span class="tag accent">Docker Compose</span>
-            <span class="tag accent">Git</span>
-            <span class="tag accent">Bash</span>
-            <span class="tag accent">Cron</span>
-          </div>
-        </div>
-        <div class="stack-category">
-          <h3>Languages</h3>
-          <div class="tags">
-            <span class="tag blue">Python</span>
-            <span class="tag blue">Java</span>
-            <span class="tag blue">Bash</span>
-            <span class="tag blue">SQL</span>
-          </div>
-        </div>
-        <div class="stack-category">
-          <h3>Platforms</h3>
-          <div class="tags">
-            <span class="tag dim">Kali Linux</span>
-            <span class="tag dim">Ubuntu</span>
-            <span class="tag dim">Debian</span>
-            <span class="tag dim">Android</span>
-            <span class="tag dim">AWS</span>
-          </div>
-        </div>
-        <div class="stack-category">
-          <h3>Tools</h3>
-          <div class="tags">
-            <span class="tag dim">CLI</span>
-            <span class="tag dim">Vim</span>
-            <span class="tag dim">Django</span>
-            <span class="tag dim">GitHub</span>
-            <span class="tag dim">.NET</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <div class="toast" id="toast"></div>
 
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <div class="section-inner">
-      <p class="section-label">// projects/</p>
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-
-        <div class="project-card featured">
-          <div class="project-top">
-            <span class="project-tag">Django &middot; Docker &middot; Python</span>
-            <a href="https://github.com/Di-exGeneral/HCI-Assignment" target="_blank" class="project-link">&#8599;</a>
-          </div>
-          <h3>CommunityFix</h3>
-          <p>A community fault reporting system built for the HCI module. Citizens can submit and track service delivery issues without an account. Containerised with Docker.</p>
-          <div class="project-footer">
-            <span class="project-status live">Containerised</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-tag">Bash &middot; Python &middot; Cron</span>
-            <a href="https://github.com/Di-exGeneral/DevOps-Journey" target="_blank" class="project-link">&#8599;</a>
-          </div>
-          <h3>DevOps Journey</h3>
-          <p>A public repo documenting my self-taught DevOps learning path. Includes automation scripts, Dockerfiles, Git hooks, and system monitoring tools.</p>
-          <div class="project-footer">
-            <span class="project-status active">Active</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-tag">Java &middot; Android</span>
-            <a href="#" class="project-link">&#8599;</a>
-          </div>
-          <h3>Restaurant Mobile App</h3>
-          <p>An Android application for restaurant ordering and menu management built with Java.</p>
-          <div class="project-footer">
-            <span class="project-status done">Completed</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-tag">Java &middot; Android</span>
-            <a href="#" class="project-link">&#8599;</a>
-          </div>
-          <h3>Banking App</h3>
-          <p>A mobile banking application built for Android with account management and transaction features.</p>
-          <div class="project-footer">
-            <span class="project-status done">Completed</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-top">
-            <span class="project-tag">.NET &middot; Backend</span>
-            <a href="#" class="project-link">&#8599;</a>
-          </div>
-          <h3>Website Backend</h3>
-          <p>A backend API built with .NET handling server-side logic, routing, and data management.</p>
-          <div class="project-footer">
-            <span class="project-status done">Completed</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="section-inner">
-      <p class="section-label">// contact.sh</p>
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-grid">
-
-        <a href="https://github.com/Di-exGeneral" target="_blank" class="contact-card">
-          <i class="fa-brands fa-github"></i>
-          <span class="contact-label">GitHub</span>
-          <span class="contact-val">Di-exGeneral</span>
-        </a>
-
-        <a href="mailto:tlotlisoaustonledwaba@gmail.com" class="contact-card">
-          <span class="contact-icon">@</span>
-          <span class="contact-label">Email</span>
-          <span class="contact-val">tlotlisoaustonledwaba@gmail.com</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/tlotliso-ledwaba-3201ab309/" class="contact-card">
-          <i class="fa-brands fa-square-linkedin"></i>
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-val">Tlotliso Ledwaba</span>
-        </a>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Built with HTML, CSS &amp; Docker &mdash; Di-exGeneral &copy; 2026</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
