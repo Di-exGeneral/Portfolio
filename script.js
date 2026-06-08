@@ -78,13 +78,33 @@ const bo=new IntersectionObserver((entries)=>{
 document.querySelectorAll('.skill-group').forEach(g=>bo.observe(g));
 
 // ── CONTACT FORM ──
-document.getElementById('send-btn').addEventListener('click',()=>{
-  const n=document.getElementById('cf-name').value.trim();
-  const e=document.getElementById('cf-email').value.trim();
-  const m=document.getElementById('cf-msg').value.trim();
-  if(!n||!e||!m){showToast('Please fill in all required fields.',true);return;}
-  showToast("Message sent! I'll be in touch soon.");
-  ['cf-name','cf-email','cf-subject','cf-msg'].forEach(id=>document.getElementById(id).value='');
+document.querySelector('.contact-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const n = document.getElementById('cf-name').value.trim();
+  const em = document.getElementById('cf-email').value.trim();
+  const m = document.getElementById('cf-msg').value.trim();
+
+  if (!n || !em || !m) {
+    showToast('Please fill in all required fields.', true);
+    return;
+  }
+
+  const formData = new FormData(e.target);
+
+  const res = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData
+  });
+
+  const data = await res.json();
+
+  if (data.success) {
+    showToast("Message sent! I'll be in touch soon.");
+    ['cf-name', 'cf-email', 'cf-subject', 'cf-msg'].forEach(id => document.getElementById(id).value = '');
+  } else {
+    showToast('Something went wrong. Try again.', true);
+  }
 });
 
 // ── CV MODAL ──

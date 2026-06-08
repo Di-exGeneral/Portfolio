@@ -54,7 +54,7 @@
           <p class="hero-role"><span>$</span> DevOps Engineer</p>
           <p class="hero-desc">
             I build infrastructure, automate workflows, and ship real software.
-            From containerised deployments to team-led mobile applications —
+            From containerised deployments to mobile applications —
             engineering discipline meets practical delivery.
           </p>
           <div class="hero-actions">
@@ -87,42 +87,45 @@
         <div class="about-grid">
           <div class="glass about-main reveal-left">
             <p>
-              I'm a third-year ICT student at
-              <strong>Sol Plaatje University</strong> in Kimberley, with
-              hands-on experience across infrastructure, automation,
-              containerisation, and full-stack development. I don't just study
-              these things — I build with them.
+              I'm a final year ICT student at
+              <strong>Sol Plaatje University</strong> in Kimberley, with hands-on experience across infrastructure, automation,
+              containerisation, and full-stack development, security analysis and ethical hacking. I don't just study these
+              things — I build with them.
+            </p>
+
+            <p>
+              I built the <strong>Di-exChef</strong>, a mobile application that helps store and manage your reciepes. I also
+              built <strong>CommunityFix</strong>, a fullyfunctional Django fault-reporting platform with admin dashboards,
+              real-time validation, and dispute resolution — independently, for a production-level brief.
             </p>
             <p>
-              I lead a four-member development team building
-              <strong>HydroAlert</strong>, a mobile water outage notification
-              system. I also built <strong>CommunityFix</strong>, a fully
-              functional Django fault-reporting platform with admin dashboards,
-              real-time validation, and dispute resolution — independently, for
-              a production-level brief.
-            </p>
-            <p>
-              Outside of project work, I hold the role of
-              <strong>Deputy Community Outreach Officer</strong> at SPU's NAS
-              Community Engagement Committee, and I voluntarily tutor and mentor
-              fellow students in mobile application development. I build, I
-              lead, and I ship.
+              Outside of project work, I hold the role of <strong>Deputy Community Outreach Officer</strong> at SPU's NAS
+              Community Engagement Committee, and I voluntarily tutor and mentor fellow students in mobile application
+              development. I build, I lead, and I ship.
             </p>
           </div>
 
+          
           <div class="about-side">
+            <a href="hackathons.html" style="text-decoration: none">
             <div class="glass stat-card reveal" style="transition-delay: 0.08s">
               <span class="stat-num">5+</span>
               <span class="stat-label">PROJECTS SHIPPED</span>
             </div>
+          </a>
+
+            <a href="hackathons.html" style="text-decoration: none">
             <div class="glass stat-card reveal" style="transition-delay: 0.16s">
               <span class="stat-num">4</span>
-              <span class="stat-label">TEAM MEMBERS LED</span>
+              <span class="stat-label">HACKATHONS</span>
             </div>
+
+            <a href="hackathons.html" style="text-decoration: none">
             <div class="glass stat-card reveal" style="transition-delay: 0.24s">
               <span class="stat-num">3</span>
               <span class="stat-label">YEARS BUILDING</span>
             </div>
+          </a>
           </div>
 
           <div class="glass tags-card reveal" style="transition-delay: 0.12s">
@@ -433,19 +436,20 @@
           </a>
 
           <!-- PROJECT 03 -->
-           <a href="https://github.com/Di-exGeneral/DevOps-Journey" class="p-link" target="_blank">
+           <a href="https://github.com/Di-exGeneral/Di-exChef" class="p-link" target="_blank">
             <div class="glass project-card reveal" >
               <div class="p-num">PROJECT_03</div>
-              <h3 class="p-title">DevOps Journey</h3>
+              <h3 class="p-title">Di-exChef</h3>
               <p class="p-desc">
-                Public infrastructure roadmap on GitHub. Git, Linux, Bash, Python automation, Docker, Compose, multi-container architecture,
-                volumes, networking — all hands-on.
+                A personal recipe manager built as a daily-use utility to help you store, organise, and
+                search your personal recipe collection. You can tag recipes, search by ingredient, and
+                attach photos.
               </p>
               <div class="p-stack">
                 <span class="s-chip">Docker</span>
-                <span class="s-chip">Bash</span>
+                <span class="s-chip">Flutter</span>
                 <span class="s-chip">Python</span>
-                <span class="s-chip">Linux</span>
+                <span class="s-chip">Superbase</span>
               </div>
                 <i class="fa-brands fa-github" style="color: cyan"></i>
                 GitHub
@@ -465,52 +469,27 @@
         <div class="contact-layout">
           <!-- FORM -->
           <div class="glass reveal" style="padding: 2.2rem">
-            <form class="contact-form">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
               <div class="form-row">
+                 <input type="hidden" name="access_key" value="3d526b8a-5d72-437e-920b-52333686bdca">
                 <div class="fg">
                   <label class="fl">YOUR_NAME</label>
-                  <input
-                    class="fi"
-                    type="text"
-                    placeholder="John Doe"
-                    id="cf-name"
-                  />
+                  <input class="fi" type="text" name="name" placeholder="John Doe" id="cf-name"/>
                 </div>
                 <div class="fg">
                   <label class="fl">YOUR_EMAIL</label>
-                  <input
-                    class="fi"
-                    type="email"
-                    placeholder="john@gmail.com"
-                    id="cf-email"
-                  />
+                  <input class="fi" type="email" name="email" placeholder="john@gmail.com" id="cf-email"/>
                 </div>
               </div>
               <div class="fg">
                 <label class="fl">SUBJECT</label>
-                <input
-                  class="fi"
-                  type="text"
-                  placeholder="Internship / collab / say hi"
-                  id="cf-subject"
-                />
+                <input class="fi" type="text" name="subject" placeholder="Internship / collab / say hi" id="cf-subject"/>
               </div>
               <div class="fg">
                 <label class="fl">MESSAGE</label>
-                <textarea
-                  class="ft"
-                  placeholder="Tell me about the opportunity or project..."
-                  id="cf-msg"
-                ></textarea>
+                <textarea class="ft" name="message" placeholder="Tell me about the opportunity or project..." id="cf-msg"></textarea>
               </div>
-              <button
-                type="submit"
-                class="btn-fill"
-                id="send-btn"
-                style="align-self: flex-start"
-              >
-                send_message()
-              </button>
+              <button type="submit" class="btn-fill" id="send-btn" style="align-self: flex-start">send_message()</button>
             </form>
           </div>
 
@@ -524,7 +503,6 @@
               <div>
                 <div class="c-label">EMAIL</div>
                 <div class="c-val">
-
                     tlotlisoaustonledwaba@gmail.com
                 </div>
               </div>
